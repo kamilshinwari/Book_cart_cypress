@@ -1,26 +1,21 @@
-it("select category named phone", ()=> {
-    cy.visitURL();
-    cy.mylogin('test','test');
-    cy.get('.list-group-item').its('length').then((count)=> {
-    expect(count).to.equal(4)
-    })
+import HomePage from '../support/pageObjects/HomePage'
 
-    cy.get('.list-group-item').each(($el) => {
-        const text = $el.text().trim()
-  
-        if (text.toLowerCase() === 'phones') {
-          // Wrap the raw DOM element in a Cypress chainable to click
-          cy.wrap($el).click()
-          cy.get('.card-block').eq(0).should('contain.text','Samsung galaxy s6')
-        }
+describe("Category Selection Test", () => {
+  const homePage = new HomePage()
 
-        else if(text.toLowerCase()==="laptops"){
-            cy.wrap($el).click()
-            cy.get('.card-block').eq(0).should('contain.text','Sony vaio i5')
-        }
-        else if(text.toLocaleLowerCase()==='monitors'){
-            cy.wrap($el).click()
-            cy.get('.card-block').eq(0).should('contain.text','Apple monitor 24')
-        }
-      })
+  it("select category named phone", () => {
+    homePage.visitURL()
+    homePage.myLogin('test', 'test')
+
+    homePage.getCategoryItems().its('length').should('equal', 4)
+
+    // Phones
+    homePage.selectCategoryAndCheckProduct('Phones', 'Samsung galaxy s6')
+
+    // Laptops
+    homePage.selectCategoryAndCheckProduct('Laptops', 'Sony vaio i5')
+
+    // Monitors
+    homePage.selectCategoryAndCheckProduct('Monitors', 'Apple monitor 24')
+  })
 })
