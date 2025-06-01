@@ -7,6 +7,8 @@ Prerequisites
 Node.js (v14 or above recommended)
 npm or yarn
 Git (optional, for version control)
+
+
 Project Structure
  book-cart-automation/cypress/fixtures/         # Test data (JSON)
  book-cart-automation/cypress/e2e/              # E2E test cases
