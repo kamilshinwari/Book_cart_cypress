@@ -7,19 +7,15 @@ Prerequisites
 Node.js (v14 or above recommended)
 npm or yarn
 Git (optional, for version control)
-
- Project Structure
- book-cart-automation/
- cypress/
-│  fixtures/         # Test data (JSON)
-│   e2e/              # E2E test cases
-│   support/
-│     commands.js   # Custom Cypress commands
-│      index.js
-│      pages/            # Page Object Model (POM) classes
-cypress.config.js     # Cypress config file
-package.json          # Project dependencies & scripts
-README.md
+Project Structure
+ book-cart-automation/cypress/fixtures/         # Test data (JSON)
+ book-cart-automation/cypress/e2e/              # E2E test cases
+ book-cart-automation/cypress/support/commands.js   # Custom Cypress commands
+ book-cart-automation/cypress/support/e2e.js
+ book-cart-automation/cypress/support/pages/            # Page Object Model (POM) classes
+ book-cart-automation/cypress/cypress.config.js     # Cypress config file
+ book-cart-automation/cypress/package.json          # Project dependencies & scripts
+ book-cart-automation/cypress/README.md
 
 Features Implemented
 Page Object Model (POM)
