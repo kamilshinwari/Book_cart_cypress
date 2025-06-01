@@ -1,6 +1,6 @@
-Book Cart App Automation -->
+Book Cart App Automation
 
-<!-- This project automates the testing of a Book Cart web application using Cypress. It follows the Page Object Model (POM) structure, includes custom Cypress commands, uses fixture files for test data, and generates reports using Mochawesome.
+This project automates the testing of a Book Cart web application using Cypress. It follows the Page Object Model (POM) structure, includes custom Cypress commands, uses fixture files for test data, and generates reports using Mochawesome.
 
 Project Setup
 Prerequisites
