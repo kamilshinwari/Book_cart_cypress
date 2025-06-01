@@ -10,16 +10,16 @@ Git (optional, for version control)
 
  Project Structure
  book-cart-automation/
-├── cypress/
-│   ├── fixtures/         # Test data (JSON)
-│   ├── e2e/              # E2E test cases
-│   ├── support/
-│   │   ├── commands.js   # Custom Cypress commands
-│   │   └── index.js
-│   └── pages/            # Page Object Model (POM) classes
-├── cypress.config.js     # Cypress config file
-├── package.json          # Project dependencies & scripts
-└── README.md
+ cypress/
+│  fixtures/         # Test data (JSON)
+│   e2e/              # E2E test cases
+│   support/
+│     commands.js   # Custom Cypress commands
+│      index.js
+│      pages/            # Page Object Model (POM) classes
+cypress.config.js     # Cypress config file
+package.json          # Project dependencies & scripts
+README.md
 
 Features Implemented
 Page Object Model (POM)
